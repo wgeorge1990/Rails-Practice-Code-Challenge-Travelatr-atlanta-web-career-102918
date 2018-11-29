@@ -1,4 +1,4 @@
 <h1>Destination Profile</h1>
 <p>Name: <%= @destination.name %></p>
 <p>Country: <%= @destination.country %></p>
-<p>Posts: <%= @destination.posts.first.title %></p>
+<p>Posts: <%= link_to @destination.posts.first.title, post_path(@destination.posts.first) %></p>

@@ -1,6 +1,5 @@
 <h1>Post Profile</h1>
-<p> <%= @post. %></p>
-<p> <%= @post. %></p>
-<p> <%= @post. %></p>
-<p> <%= @post. %></p>
-<p> <%= @post. %></p>
+<p>Title: <%= @post.title %></p>
+<p>Likes: <%= @post.likes %></p>
+<p>Destination: <%= link_to @post.destination.name, destination_path(@post.destination) %></p>
+<p>Content: <%= @post.content %></p>
