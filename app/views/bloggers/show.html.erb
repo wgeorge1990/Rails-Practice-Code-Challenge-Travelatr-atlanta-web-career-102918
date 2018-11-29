@@ -3,16 +3,17 @@
   <h3><li><%= @blogger.name %></li></h3>
   <li><%= @blogger.age %></li>
   <li><%= @blogger.bio %></li>
+  <li>Total Likes: <%= @blogger.total_likes %></li>
+  <li><%= link_to @top_post.title, post_path(@top_post) %></li>
+
 </ul>
+
 
 <% @blogger.posts.each do |post| %>
   <ul>
-    <% @likes += post.likes %>
-    <li>Title: <%= post.title %></li>
-    <li>Likes: <%= post.likes %></li>
-    <li><%= post.content %></li>
+    <h3>Title: <%= post.title %></h3>
+    <p>Likes: <%= post.likes %></p>
+    <p><%= post.content %></p>
   </ul>
 
 <% end %>
-
-<h1>Total Likes: <%= @likes %></h1>
