@@ -1,0 +1,18 @@
+<h1>Profile Page</h1>
+<ul>
+  <h3><li><%= @blogger.name %></li></h3>
+  <li><%= @blogger.age %></li>
+  <li><%= @blogger.bio %></li>
+</ul>
+
+<% @blogger.posts.each do |post| %>
+  <ul>
+    <% @likes += post.likes %>
+    <li>Title: <%= post.title %></li>
+    <li>Likes: <%= post.likes %></li>
+    <li><%= post.content %></li>
+  </ul>
+
+<% end %>
+
+<h1>Total Likes: <%= @likes %></h1>
